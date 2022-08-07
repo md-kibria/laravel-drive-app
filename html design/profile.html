@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drive</title>
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <script src="http://127.0.0.1:8000/tailwind.js"></script>
+</head>
+
+<body>
+    <nav class="bg-slate-600 h-16 w-full flex items-center justify-between px-2 md:px-5">
+        <h1 class="text-2xl text-gray-200">Logo</h1>
+        <form class="ml-auto mr-0 md:mr-5 ">
+            <input type="text" class="w-44 md:w-80 p-2 px-3 rounded" placeholder="Search documents...">
+            <input type="submit" class="py-2 px-3 rounded bg-green-600 text-white" value="Search">
+        </form>
+        <ul class="flex">
+            <li class="ml-3 md:ml-4 text-gray-300 hover:underline">
+                <a href="/">Login</a>
+            </li>
+            <li class="ml-3 md:ml-4 text-gray-300 hover:underline">
+                <a href="/">Register</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="flex relative">
+        <nav id="sdb" class="sidebar bg-slate-500 w-24 py-6 -left-24 absolute md:static transition-all duration-500" style="min-height: calc(100vh - 64px);">
+            <ul class="flex flex-col items-center">
+
+                <li id="left" class="md:hidden h-12 w-12 hover:bg-slate-600 my-0 rounded-full flex items-center justify-center text-2xl text-slate-800 transition ease-in-out duration-500" onclick="hide()">
+                    <i class="fa fas fa-chevron-circle-left"></i>
+                </li>
+
+                <li class="h-12 w-12 hover:bg-slate-600 my-2 rounded-full flex items-center justify-center text-2xl text-slate-800 transition ease-in-out duration-500">
+                    <a href="./index.html">
+                        <i class="fa fa-home"></i>
+                    </a>
+                </li>
+
+                <li class="h-12 w-12 hover:bg-slate-600 my-2 rounded-full flex items-center justify-center text-2xl text-slate-800 transition ease-in-out duration-500">
+                    <a href="./documents.html">
+                        <i class="fa far fa-list-alt"></i>
+                    </a>
+                </li>
+
+                <li class="h-12 w-12 hover:bg-slate-600 my-2 rounded-full flex items-center justify-center text-2xl text-slate-800 transition ease-in-out duration-500">
+                    <a href="./bookmarks.html">
+                        <i class="fa fa-star"></i>
+                    </a>
+                </li>
+
+                <li class="h-12 w-12 hover:bg-slate-600 my-2 rounded-full flex items-center justify-center text-2xl text-slate-800 transition ease-in-out duration-500">
+                    <a href="./add.html">
+                        <i class="fa far far fa-plus-square"></i>
+                    </a>
+                </li>
+
+                <li class="h-12 w-12 hover:bg-slate-600 my-2 rounded-full flex items-center justify-center text-2xl text-slate-800 transition ease-in-out duration-500">
+                    <a href="./public-documents.html">
+                        <i class="fa fas fa-globe"></i>
+                    </a>
+                </li>
+
+                <li class="h-12 w-12 hover:bg-slate-600 my-2 rounded-full flex items-center justify-center text-2xl text-slate-800 transition ease-in-out duration-500">
+                    <a href="./users.html">
+                        <i class="fa fas fa-users"></i>
+                    </a>
+                </li>
+
+                <li class="h-12 w-12 hover:bg-slate-600 my-2 rounded-full flex items-center justify-center text-2xl text-slate-800 transition ease-in-out duration-500">
+                    <a href="./profile.html">
+                        <i class="fa far fa-user"></i>
+                    </a>
+                </li>
+
+                <li class="h-12 w-12 hover:bg-slate-600 my-2 rounded-full flex items-center justify-center text-2xl text-slate-800 transition ease-in-out duration-500">
+                    <a href="./logout.html">
+                        <i class="fa far fas fa-power-off"></i>
+                    </a>
+                </li>
+
+                <li class="h-12 w-12 hover:bg-slate-600 my-2 rounded-full flex items-center justify-center text-2xl text-slate-800 transition ease-in-out duration-500">
+                    <a href="./report.html">
+                        <i class="fa far fas fa-info-circle"></i>
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+        <p id="right" class="absolute p-5 text-2xl text-slate-500 md:hidden transition-all ease-in duration-500" onclick="show()">
+            <i class="fa fas fa-chevron-circle-right"></i>
+        </p>
+
+        <div class="main bg-slate-200 w-full pt-14 md:pt-10 p-4 sm:p-10" style="min-height: calc(100vh - 64px);">
+            <h2 class="text-3xl text-slate-600 font-bold">
+                <span class="text-4xl"><i class="fa fa-user"></i></span> Profile
+            </h2>
+
+            <div class="mt-14 md:ml-10">
+                <!-- Main Content Here -->
+
+                <div class="flex flex-col lg:flex-row">
+                    <div class="flex flex-col items-center justify-center border border-slate-500 rounded-lg p-5 w-full md:w-80 h-96">
+                        <img src="./images/face-4.jpg" alt="" class="w-24 h-24 rounded-full ring-4">
+                        <h1 class="text-2xl font-medium my-2">John Doe</h1>
+                        <div class="flex flex-col my-2">
+                            <div class="flex items-center text-slate-700 text-md">
+                                <i class="fa far fa-envelope-o"></i>
+                                <p class="mx-2">john@test.com</p>
+                            </div>
+                            <div class="flex items-center text-slate-700 text-md">
+                                <i class="fa far fas fa-phone"></i>
+                                <p class="mx-2">+88 017891234</p>
+                            </div>
+                            <div class="flex items-center text-slate-700 text-md">
+                                <i class="fa far fas fa-map-marker"></i>
+                                <p class="mx-2">Dhaka, BD</p>
+                            </div>
+                        </div>
+
+                        <!-- <a href="" class="bg-yellow-500 py-2 px-4 rounded-md text-slate-700 mt-3">Reset Password</a> -->
+                        <a href="" class="bg-green-500 py-2 px-4 rounded-md text-slate-700 mt-3">Send Email</a>
+                    </div>
+
+                    <!-- Update section -->
+
+                    <div class="flex lg:mx-5 my-10 lg:my-0 lg:ml-20 border border-slate-500 rounded-md p-5 w-full md:w-80 lg:w-96">
+                        <form action="" method="get" class="w-full">
+                            <div class="my-2">
+                                <label for="" class="inline-block text-xl mb-2">Name</label>
+                                <input type="text" name="name" class="border border-slate-500 rounded w-full py-2 px-3" placeholder="Your name">
+                            </div>
+
+                            <div class="my-2">
+                                <label for="" class="inline-block text-xl mb-2">Email</label>
+                                <input type="text" name="email" class="border border-slate-500 rounded w-full py-2 px-3" placeholder="Your email">
+                            </div>
+
+                            <div class="my-2">
+                                <label for="" class="inline-block text-xl mb-2">Phone</label>
+                                <input type="text" name="phone" class="border border-slate-500 rounded w-full py-2 px-3" placeholder="Your phone">
+                            </div>
+
+                            <div class="my-2">
+                                <label for="" class="inline-block text-xl mb-2">Address</label>
+                                <input type="text" name="address" class="border border-slate-500 rounded w-full py-2 px-3" placeholder="Your address">
+                            </div>
+
+                            <div class="my-2">
+                                <input type="submit" value="Update" class="mt-5 bg-yellow-600 py-2 px-5 rounded-md text-white">
+                            </div>
+                        </form>
+                    </div>
+
+                    <!--!! Update section !!-->
+                </div>
+
+                <!--!! Main Content Here !!-->
+            </div>
+
+
+        </div>
+    </main>
+
+    <script>
+        const sdb = document.getElementById('sdb')
+        const right = document.getElementById('right')
+        const left = document.getElementById('left')
+
+        function show() {
+            sdb.classList.remove('-left-24')
+            sdb.classList.add('left-0')
+            right.classList.add('hidden')
+            left.classList.remove('hidden')
+            left.classList.add('block')
+        }
+
+        function hide() {
+            sdb.classList.remove('left-0')
+            sdb.classList.add('-left-24')
+            right.classList.remove('hidden')
+            right.classList.add('block')
+
+        }
+    </script>
+</body>
+
+</html>

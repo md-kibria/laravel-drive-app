@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drive</title>
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <script src="http://127.0.0.1:8000/tailwind.js"></script>
+</head>
+
+<body>
+    <nav class="bg-slate-600 h-16 w-full flex items-center justify-between px-2 md:px-5">
+        <h1 class="text-2xl text-gray-200">Logo</h1>
+        <form class="ml-auto mr-0 md:mr-5 ">
+            <input type="text" class="w-44 md:w-80 p-2 px-3 rounded" placeholder="Search documents...">
+            <input type="submit" class="py-2 px-3 rounded bg-green-600 text-white" value="Search">
+        </form>
+        <ul class="flex">
+            <li class="ml-3 md:ml-4 text-gray-300 hover:underline">
+                <a href="/">Login</a>
+            </li>
+            <li class="ml-3 md:ml-4 text-gray-300 hover:underline">
+                <a href="/">Register</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="flex relative">
+        <nav id="sdb" class="sidebar bg-slate-500 w-24 py-6 -left-24 absolute md:static transition-all duration-500" style="min-height: calc(100vh - 64px);">
+            <ul class="flex flex-col items-center">
+
+                <li id="left" class="md:hidden h-12 w-12 hover:bg-slate-600 my-0 rounded-full flex items-center justify-center text-2xl text-slate-800 transition ease-in-out duration-500" onclick="hide()">
+                    <i class="fa fas fa-chevron-circle-left"></i>
+                </li>
+
+                <li class="h-12 w-12 hover:bg-slate-600 my-2 rounded-full flex items-center justify-center text-2xl text-slate-800 transition ease-in-out duration-500">
+                    <a href="./index.html">
+                        <i class="fa fa-home"></i>
+                    </a>
+                </li>
+
+                <li class="h-12 w-12 hover:bg-slate-600 my-2 rounded-full flex items-center justify-center text-2xl text-slate-800 transition ease-in-out duration-500">
+                    <a href="./documents.html">
+                        <i class="fa far fa-list-alt"></i>
+                    </a>
+                </li>
+
+                <li class="h-12 w-12 hover:bg-slate-600 my-2 rounded-full flex items-center justify-center text-2xl text-slate-800 transition ease-in-out duration-500">
+                    <a href="./bookmarks.html">
+                        <i class="fa fa-star"></i>
+                    </a>
+                </li>
+
+                <li class="h-12 w-12 hover:bg-slate-600 my-2 rounded-full flex items-center justify-center text-2xl text-slate-800 transition ease-in-out duration-500">
+                    <a href="./add.html">
+                        <i class="fa far far fa-plus-square"></i>
+                    </a>
+                </li>
+
+                <li class="h-12 w-12 hover:bg-slate-600 my-2 rounded-full flex items-center justify-center text-2xl text-slate-800 transition ease-in-out duration-500">
+                    <a href="./public-documents.html">
+                        <i class="fa fas fa-globe"></i>
+                    </a>
+                </li>
+
+                <li class="h-12 w-12 hover:bg-slate-600 my-2 rounded-full flex items-center justify-center text-2xl text-slate-800 transition ease-in-out duration-500">
+                    <a href="./users.html">
+                        <i class="fa fas fa-users"></i>
+                    </a>
+                </li>
+
+                <li class="h-12 w-12 hover:bg-slate-600 my-2 rounded-full flex items-center justify-center text-2xl text-slate-800 transition ease-in-out duration-500">
+                    <a href="./profile.html">
+                        <i class="fa far fa-user"></i>
+                    </a>
+                </li>
+
+                <li class="h-12 w-12 hover:bg-slate-600 my-2 rounded-full flex items-center justify-center text-2xl text-slate-800 transition ease-in-out duration-500">
+                    <a href="./logout.html">
+                        <i class="fa far fas fa-power-off"></i>
+                    </a>
+                </li>
+
+                <li class="h-12 w-12 hover:bg-slate-600 my-2 rounded-full flex items-center justify-center text-2xl text-slate-800 transition ease-in-out duration-500">
+                    <a href="./report.html">
+                        <i class="fa far fas fa-info-circle"></i>
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+        <p id="right" class="absolute p-5 text-2xl text-slate-500 md:hidden transition-all ease-in duration-500" onclick="show()">
+            <i class="fa fas fa-chevron-circle-right"></i>
+        </p>
+
+        <div class="main bg-slate-200 w-full pt-14 md:pt-10 p-4 sm:p-10" style="min-height: calc(100vh - 64px);">
+            <h2 class="text-3xl text-slate-600 font-bold">
+                <span class="text-4xl"><i class="fa fa-file"></i></span> Document
+            </h2>
+
+            <div class="mt-14 md:ml-10">
+                <!-- Main Content Here -->
+
+                <!-- Single Document -->
+                <div class="border border-slate-500 p-5 my-4 rounded">
+
+                    <!-- <div class="mt-2">
+                        <ul class="flex justify-end">
+                            <li class="text-xl mx-1 text-slate-900">
+                                <i class="fa far fa-star-o"></i>
+                            </li>
+                            <li class="text-xl mx-1 text-green-500">
+                                <i class="fa fa-globe"></i>
+                            </li>
+                            <li class="text-xl mx-1 text-yellow-600">
+                                <i class="fa far fa-edit"></i>
+                            </li>
+                            <li class="text-xl mx-1 text-red-500">
+                                <i class="fa far fa-trash"></i>
+                            </li>
+                        </ul>
+                    </div> -->
+
+                    <a href="./doc.html">
+                        <h2 class="text-2xl">This is document title</h2>
+                    </a>
+                    <span class="text-gray-500">by <a class="underline" href="./profile.html">John Doe</a>, on 7 Jun, 2022</span>
+                    <p class="text-slate-800 mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis earum sunt minus possimus tempora cum, consectetur odit illo dicta autem optio, dolorum, reprehenderit dolorem incidunt. A ratione expedita fugiat delectus odit atque
+                        tempore ad at maxime voluptatum? Voluptate provident alias expedita modi labore odio esse voluptas quis animi qui neque, at, quidem deserunt ipsam vitae est maiores sint facere rem reprehenderit nesciunt. Qui consequatur dicta
+                        enim saepe cum quasi explicabo minima dignissimos assumenda, quae hic sapiente! Nulla asperiores reprehenderit, vero tempora odio ducimus hic perspiciatis ex temporibus officiis odit cum numquam blanditiis saepe. Nisi et provident
+                        numquam labore assumenda? Sequi?</p>
+
+                    <p class="text-slate-800 mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis earum sunt minus possimus tempora cum, consectetur odit illo dicta autem optio, dolorum, reprehenderit dolorem incidunt. A ratione expedita fugiat delectus odit atque
+                        tempore ad at maxime voluptatum? Voluptate provident alias expedita modi labore odio esse voluptas quis animi qui neque, at, quidem deserunt ipsam vitae est maiores sint facere rem reprehenderit nesciunt. Qui consequatur dicta
+                        enim saepe cum quasi explicabo minima dignissimos assumenda, quae hic sapiente! Nulla asperiores reprehenderit, vero tempora odio ducimus hic perspiciatis ex temporibus officiis odit cum numquam blanditiis saepe. Nisi et provident
+                        numquam labore assumenda? Sequi?</p>
+
+
+                    <ul class="flex mb-5 mt-10">
+                        <li class=" mx-3 flex flex-col relative">
+                            <span class="absolute h-5 w-5 bg-gray-200 flex items-center justify-center rounded-full -top-2 -left-2 ring-1 ring-indigo-500 text-indigo-500">1</span>
+                            <i class="fa fa-file-image-o text-6xl text-indigo-500"></i>
+                            <div class="flex justify-center my-1">
+                                <i class="fa fas fa-eye mx-1 text-emerald-500"></i>
+                                <i class="fa fa-trash mx-1 text-red-500"></i>
+                            </div>
+                        </li>
+                        <li class="mx-3 flex flex-col relative">
+                            <span class="absolute h-5 w-5 bg-gray-200 flex items-center justify-center rounded-full -top-2 -left-2 ring-1 ring-indigo-500 text-indigo-500">2</span>
+                            <i class="fa fa-file-zip-o text-6xl text-indigo-500"></i>
+                            <div class="flex justify-center my-1">
+                                <i class="fa fas fa-eye mx-1 text-emerald-500"></i>
+                                <i class="fa fa-trash mx-1 text-red-500"></i>
+                            </div>
+                        </li>
+                        <li class="mx-3 flex flex-col relative">
+                            <span class="absolute h-5 w-5 bg-gray-200 flex items-center justify-center rounded-full -top-2 -left-2 ring-1 ring-indigo-500 text-indigo-500">3</span>
+                            <i class="fa fa-file-pdf-o text-6xl text-indigo-500"></i>
+                            <div class="flex justify-center my-1">
+                                <i class="fa fas fa-eye mx-1 text-emerald-500"></i>
+                                <i class="fa fa-trash mx-1 text-red-500"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!--!! Single Document !!-->
+
+                <!--!! Main Content Here !!-->
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        const sdb = document.getElementById('sdb')
+        const right = document.getElementById('right')
+        const left = document.getElementById('left')
+
+        function show() {
+            sdb.classList.remove('-left-24')
+            sdb.classList.add('left-0')
+            right.classList.add('hidden')
+            left.classList.remove('hidden')
+            left.classList.add('block')
+        }
+
+        function hide() {
+            sdb.classList.remove('left-0')
+            sdb.classList.add('-left-24')
+            right.classList.remove('hidden')
+            right.classList.add('block')
+
+        }
+    </script>
+</body>
+
+</html>
